@@ -5,6 +5,7 @@ import Form from './Form';
 
 import { fetchMoviesByQuery } from 'services/api';
 import { useRequest } from 'hooks/useRequest';
+import s from './Movies.module.css';
 
 const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -22,7 +23,11 @@ const Movies = () => {
         <ul>
           {movies?.map(movie => (
             <li key={movie.id}>
-              <Link state={{ from: location }} to={movie.id.toString()}>
+              <Link
+                state={{ from: location }}
+                to={movie.id.toString()}
+                className={s.item_movie}
+              >
                 {movie.title}
               </Link>
             </li>

@@ -1,6 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
+import s from './Form.module.css';
+
 const Form = ({ setSearchParams }) => {
   const { register, handleSubmit, reset } = useForm();
 
@@ -10,9 +12,9 @@ const Form = ({ setSearchParams }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(submit)}>
-      <input {...register('searchValue')} type="search" />
-      <button>Search</button>
+    <form onSubmit={handleSubmit(submit)} className={s.form}>
+      <input {...register('searchValue')} type="search" className={s.input} />
+      <button className={s.button}>Search</button>
     </form>
   );
 };

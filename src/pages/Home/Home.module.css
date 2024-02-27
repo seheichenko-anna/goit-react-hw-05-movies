@@ -1,0 +1,13 @@
+.item_movie {
+    font-size: 20px;
+    text-decoration: none;
+    color: #161A30;
+}
+
+.item_movie:visited {
+    color: #864AF9;
+}
+
+.item_movie:hover {
+    color: #0092ca;
+}

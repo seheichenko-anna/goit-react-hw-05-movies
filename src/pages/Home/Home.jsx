@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 import { fetchTrendingMovies } from 'services/api';
 import { useRequest } from 'hooks/useRequest';
+import s from './Home.module.css';
 
 const Home = () => {
   const [movies] = useRequest(fetchTrendingMovies);
@@ -20,6 +21,7 @@ const Home = () => {
             <Link
               state={{ from: location }}
               to={`movies/${movie.id.toString()}`}
+              className={s.item_movie}
             >
               {movie.title || movie.name}
             </Link>

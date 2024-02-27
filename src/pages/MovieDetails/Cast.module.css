@@ -1,0 +1,13 @@
+.cast_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cast_item {
+    width: 150px;
+}
+
+.cast_img {
+    width: 100%;
+}

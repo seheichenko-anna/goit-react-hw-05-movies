@@ -1,0 +1,44 @@
+.btn_goBack {
+    border: 1px solid #864AF9;
+    padding: 4px 16px;
+    text-decoration: none;
+    color: #864AF9;
+    border-radius: 4px;
+    align-self: flex-start;
+}
+
+.btn_goBack:hover,
+.btn_goBack:focus {
+    background-color: #864AF9;
+    color: white;
+}
+
+.movie_details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.list_links {
+    display: flex;
+    gap: 10px
+}
+
+.item_link {
+    border: 1px solid #864AF9;
+    padding: 4px 16px;
+    text-decoration: none;
+    color: #864AF9;
+    border-radius: 4px;
+}
+
+.item_link:hover,
+.item_link:focus {
+    background-color: #864AF9;
+    color: white;
+}
