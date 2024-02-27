@@ -9,7 +9,7 @@ const Reviews = () => {
   const [movie] = useRequest(fetchMovieReviews, movieId);
 
   if (!movie) {
-    return <h1>Loading...</h1>;
+    return <h2>Loading...</h2>;
   }
 
   return (

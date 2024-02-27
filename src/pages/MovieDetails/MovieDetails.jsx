@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { Suspense, useRef } from 'react';
 import {
   useParams,
   NavLink,
@@ -17,7 +17,7 @@ const MovieDetails = () => {
   const goBackRef = useRef(location.state?.from || '/');
 
   if (!movie) {
-    return <h1>Loading...</h1>;
+    return <h2>Loading...</h2>;
   }
 
   return (
@@ -47,7 +47,9 @@ const MovieDetails = () => {
             </li>
           </ul>
         </nav>
-        <Outlet />
+        <Suspense fallback={<h2>Loading...</h2>}>
+          <Outlet />
+        </Suspense>
       </section>
     </>
   );
